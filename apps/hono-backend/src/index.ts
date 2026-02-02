@@ -3,7 +3,7 @@ import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 import { logger } from 'hono/logger'
 import { serve } from '@hono/node-server'
-import {handle} from 'hono/vercel'
+
 
 type Todo = {
   id: Number
@@ -28,7 +28,7 @@ let todos: Todo[] = [
   }
 ]
 
-const app = new Hono()
+export const app = new Hono()
 
 
 app.use('*', logger())
@@ -123,4 +123,4 @@ serve({
 })
 
 console.log(`🚀 Todo API running on http://localhost:${port}`)
-export default handle(app)
+
