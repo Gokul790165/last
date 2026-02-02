@@ -1,5 +1,5 @@
 {
-  "name": "Honobackend",
+  "name": "hono-backend",
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
